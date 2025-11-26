@@ -6,105 +6,127 @@ export function Footer() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const socialLinks = [
+    {
+      href: "https://github.com/AbhishekSubramanian",
+      icon: Github,
+      label: "GitHub",
+      subtitle: "View Code"
+    },
+    {
+      href: "http://www.linkedin.com/in/abhishek--subramanian",
+      icon: Linkedin,
+      label: "LinkedIn",
+      subtitle: "Connect"
+    },
+    {
+      href: "https://twitter.com/yourusername",
+      icon: Twitter,
+      label: "Twitter",
+      subtitle: "Follow"
+    },
+    {
+      href: "mailto:abhisheksubramanianofficial@gmail.com",
+      icon: Mail,
+      label: "Email",
+      subtitle: "Get in Touch"
+    },
+    {
+      href: "tel:+1234567890",
+      icon: Phone,
+      label: "Phone",
+      subtitle: "Call Me"
+    }
+  ];
+
   return (
-    <section id='footer'>
-    <footer className="bg-ink/5 border-t border-ink/10 py-16">
-      <div className="newspaper-container">
-        <div className="grid grid-cols-1 gap-12">
-          <div>
-            <h2 className="text-2xl font-display font-bold mb-6">The Classifieds</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-              <motion.a
-                whileHover={{ scale: 1.02 }}
-                href="https://github.com/AbhishekSubramanian"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="vintage-card flex items-center gap-3 hover:bg-ink/5 p-4"
-              >
-                <div className="p-3 bg-accent/10 rounded-full">
-                  <Github className="w-6 h-6 text-accent" />
-                </div>
-                <div>
-                  <h3 className="font-display font-bold">GitHub</h3>
-                  <p className="text-sm text-muted">Follow for Code</p>
-                </div>
-              </motion.a>
+    <section id="footer">
+      <footer className="section-muted py-12 border-t border-ink/10 dark:border-gold/20">
+        <div className="newspaper-container">
+          {/* Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="font-display text-3xl sm:text-4xl font-bold mb-4">
+              The Classifieds
+            </h2>
+            <p className="font-accent text-lg text-muted italic">
+              Let's connect and create something extraordinary
+            </p>
+          </motion.div>
 
+          {/* Social Links Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-16">
+            {socialLinks.map((link, index) => (
               <motion.a
-                whileHover={{ scale: 1.02 }}
-                href="http://www.linkedin.com/in/abhishek--subramanian"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="vintage-card flex items-center gap-3 hover:bg-ink/5 p-4"
+                key={link.label}
+                href={link.href}
+                target={link.href.startsWith('http') ? '_blank' : undefined}
+                rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                className="group p-6 bg-paper dark:bg-ink/10 
+                           border border-ink/10 dark:border-gold/20 
+                           hover:border-accent/20 dark:hover:border-gold/40
+                           transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                whileHover={{ y: -4 }}
               >
-                <div className="p-3 bg-accent/10 rounded-full">
-                  <Linkedin className="w-6 h-6 text-accent" />
-                </div>
-                <div>
-                  <h3 className="font-display font-bold">LinkedIn</h3>
-                  <p className="text-sm text-muted">Professional Network</p>
+                <div className="flex flex-col items-center text-center gap-3">
+                  <div className="p-4 bg-accent/5 rounded-full group-hover:bg-accent/10 
+                                  transition-colors duration-300">
+                    <link.icon className="w-6 h-6 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="font-display font-bold text-ink group-hover:text-accent 
+                                   transition-colors duration-300">
+                      {link.label}
+                    </h3>
+                    <p className="text-xs text-muted font-accent mt-1">
+                      {link.subtitle}
+                    </p>
+                  </div>
                 </div>
               </motion.a>
+            ))}
+          </div>
 
-              <motion.a
-                whileHover={{ scale: 1.02 }}
-                href="https://twitter.com/yourusername"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="vintage-card flex items-center gap-3 hover:bg-ink/5 p-4"
-              >
-                <div className="p-3 bg-accent/10 rounded-full">
-                  <Twitter className="w-6 h-6 text-accent" />
-                </div>
-                <div>
-                  <h3 className="font-display font-bold">Twitter</h3>
-                  <p className="text-sm text-muted">Latest Updates</p>
-                </div>
-              </motion.a>
+          {/* Decorative divider */}
+          <div className="flex items-center justify-center gap-4 mb-12">
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-ink/20 to-transparent" />
+            <span className="font-accent text-2xl text-accent/40">❦</span>
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-ink/20 to-transparent" />
+          </div>
 
-              <motion.a
-                whileHover={{ scale: 1.02 }}
-                href="mailto:abhisheksubramanianofficial@gmail.com"
-                className="vintage-card flex items-center gap-3 hover:bg-ink/5 p-4"
-              >
-                <div className="p-3 bg-accent/10 rounded-full">
-                  <Mail className="w-6 h-6 text-accent" />
-                </div>
-                <div>
-                  <h3 className="font-display font-bold">Email</h3>
-                  <p className="text-sm text-muted">Get in Touch</p>
-                </div>
-              </motion.a>
-
-              <motion.a
-                whileHover={{ scale: 1.02 }}
-                href="tel:+1234567890"
-                className="vintage-card flex items-center gap-3 hover:bg-ink/5 p-4"
-              >
-                <div className="p-3 bg-accent/10 rounded-full">
-                  <Phone className="w-6 h-6 text-accent" />
-                </div>
-                <div>
-                  <h3 className="font-display font-bold">Phone</h3>
-                  <p className="text-sm text-muted">+1 (234) 567-890</p>
-                </div>
-              </motion.a>
+          {/* Footer bottom */}
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted">
+            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+              <p className="font-body">
+                © {new Date().getFullYear()} <span className="font-display font-semibold">The Portfolio Times</span>
+              </p>
+              <span className="hidden sm:inline text-ink/20 dark:text-gold/20">•</span>
+              <p className="font-accent text-xs text-muted/70">
+                Last updated: November 2025
+              </p>
             </div>
+            
+            <motion.button
+              onClick={scrollToTop}
+              className="p-3 bg-accent/5 hover:bg-accent/10 rounded-full transition-all duration-300"
+              aria-label="Scroll to top"
+              whileHover={{ y: -4, scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <ArrowUp className="w-5 h-5 text-accent" />
+            </motion.button>
           </div>
         </div>
-
-        <div className="mt-12 pt-8 border-t border-ink/10 flex items-center justify-between text-sm text-muted">
-          <p>© {new Date().getFullYear()} The Portfolio Times. All rights reserved.</p>
-          <button
-            onClick={scrollToTop}
-            className="p-2 hover:bg-ink/5 rounded-full transition-colors"
-            aria-label="Scroll to top"
-          >
-            <ArrowUp className="w-5 h-5" />
-          </button>
-        </div>
-      </div>
-    </footer>
+      </footer>
     </section>
   );
 }
