@@ -35,49 +35,49 @@ function App() {
       title: "ML & Software Engineering Intern",
       organization: "Quantiphi",
       description: "Building production-grade multi-agent LLM systems for healthcare data intelligence and market research automation. Developing multi-agent pipelines using LangChain with GPT-4 integration, implementing identity and access control for ~60K users with Microsoft Entra ID, and deploying scalable systems on Azure. Achieved major operational efficiencies with ~$1.5M+ in projected annual impact.",
-      logo: "/images/quantiphi-logo.png",
+      logo: "images/quantiphi-logo.png",
     },
     {
       date: "Jan 2025 - May 2025",
       title: "IT Support Staff",
       organization: "Virginia Tech Software Assistance & Triage (S.W.A.T)",
       description: "In this role, I deliver proactive IT support to College of Engineering students by diagnosing and resolving technical issues with personal computing devices. I manage the SWAT loaner laptop program with strict adherence to policy, ensuring that students receive reliable and efficient technology support. Additionally, I provide maintenance and troubleshooting for SWAT-designated computer labs, improving system performance and enhancing overall user experience.",
-      logo: '/images/vt_logo.png',
+      logo: 'images/vt_logo.png',
     },
     {
       date: "2024 - Present",
       title: "Master's in Computer Engineering",
       organization: "Virginia Tech",
       description: "At Virginia Tech, I am pursuing a Master of Science in Computer Engineering with a concentration in AI/ML and Software Engineering. My coursework in Advanced Machine Learning, Computer Vision, and Natural Language Processing has equipped me with a strong foundation to develop cutting-edge AI solutions. The program has also given me exposure to real-world applications and collaborative research that drive innovation.",
-      logo: '/images/vt_logo.png',
+      logo: 'images/vt_logo.png',
     },
     {
       date: "2022 - 2024",
       title: "Software Engineer",
       organization: "Quantiphi",
       description: "At Quantiphi, I worked as a Software Engineer where I collaborated closely with cross-functional teams and stakeholders to build scalable AI-driven applications. My work spanned from designing interactive frontends to building robust backend infrastructures, contributing to projects like NVIDIA's Digital Avatar and Starbucks' AI Assistant. I played a key role in enhancing user experience, optimizing system performance, and delivering high-impact solutions through stakeholder-centric development.",
-      logo: "/images/quantiphi-logo.png",
+      logo: "images/quantiphi-logo.png",
     },
     {
       date: "2022",
       title: "Thesis Publication",
       organization: "Research Work",
       description: "My thesis work, titled \"Unhealthy Liver Detection using CNN with IoT,\" was presented at the 2023 IEEE ICSCSS conference. The project demonstrated the potential of deep learning for early liver disease detection using CT imagery, achieving an 86.8% detection rate. It integrated advanced image processing with CNN architectures and contributed valuable insights into AI-powered healthcare diagnostics.",
-      logo: "/images/ieee-logo.png",
+      logo: "images/ieee-logo.png",
     },
     {
       date: "2020",
       title: "Chairperson of Events",
       organization: "Anna University Student Entrepreneurship Club",
       description: "As Chair of Events at Anna University's Student Entrepreneurship Club, I led the ideation and execution of flagship programs such as Idea Hub and Code Fest—initiatives that successfully incubated startups and promoted technical innovation. I restructured the club's operations, resulting in a 2x growth in student participation within a year. Additionally, as Charge d'Affaires for Anna University's Model United Nations, I spearheaded the university's first MUN conference and cultivated institutional partnerships to elevate the event's stature and outreach.",
-      logo: "/images/ausec-logo.png",
+      logo: "images/ausec-logo.png",
     },
     {
       date: "2018 - 2022",
       title: "Bachelor's in Electronics and Communication Engineering",
       organization: "College of Engineering, Guindy (Anna University)",
       description: "During my undergraduate studies at Anna University, I built a strong technical foundation in electronics, software development, and systems design. Courses in Object-Oriented Programming, Operating Systems, and Soft Computing sparked my passion for technology and laid the groundwork for my journey into AI and software engineering. I also actively participated in technical projects and student-led initiatives that honed my practical and leadership skills.",
-      logo: "/images/ceg-logo.jpg",
+      logo: "images/ceg-logo.jpg",
     }
   ];
 
@@ -86,14 +86,14 @@ function App() {
       title: "Enhancing Emotional Well-Being through ML-based Music Emotion Recognition",
       description: "This project explores the emotional impact of music using machine learning, applying CNN and RNN (LSTM) architectures to classify emotions based on musical patterns.",
       details: "Trained on the DEAM dataset with MFCC-based features, the models achieved up to 76.22% accuracy, showcasing the RNN's effectiveness in processing sequential data. With potential applications in music recommendation systems, therapy, and mood-aware platforms, this project highlights the intersection of technology and emotional well-being.",
-      image: "/images/mer.png",
+      image: "images/mer.png",
       githubUrl: "https://github.com/AbhishekSubramanian/Enhancing-Emotional-Well-Being-through-ML-based-MER"
     },
     {
       title: "YOLOv5-Powered X-Ray Baggage Screening",
       description: "A computer vision-driven solution for enhancing airport security through real-time baggage threat detection using YOLOv5.",
       details: "Fine-tuned on the OPIXray dataset, the model accurately identifies suspicious items like knives and scissors, achieving high precision (90.3%) and recall (87.1%). Integrated into a user-friendly Streamlit web app, the system offers scalable deployment potential, aiming to reduce manual inspection efforts and support automated security protocols in high-risk zones.",
-      image: "/images/yolo.webp",
+      image: "images/yolo.webp",
       githubUrl: "https://github.com/AbhishekSubramanian/YOLOv5-Powered-X-Ray-Baggage-Screening-for-Threat-Detection-in-Airports"
     },
     {
@@ -107,7 +107,7 @@ function App() {
       title: "Liver Disease Detection using CNN and IoT",
       description: "Early liver disease diagnosis system combining CNN-based analysis of CT images with IoT-enabled health monitoring.",
       details: "Using image processing techniques to enhance detection accuracy, the system not only identifies unhealthy liver patterns but also employs Wi-Fi and GSM modules for real-time updates and emergency alerts. The result is a smart healthcare solution that enables continuous monitoring and faster medical intervention.",
-      image: "/images/liver.png",
+      image: "images/liver.png",
       githubUrl: "https://github.com/AbhishekSubramanian/Liver-Disease-Detection-CNN-IOT"
     },
     {
@@ -317,7 +317,7 @@ function App() {
               duration="May 2025 - Present"
               location="Greater Boston · Remote"
               type="Internship"
-              logo="/images/quantiphi-logo.png"
+              logo="images/quantiphi-logo.png"
               details={quantiphiInternDetails}
             />
             
@@ -327,7 +327,7 @@ function App() {
               duration="2022 - 2024"
               location="Bengaluru, India"
               type="Full-Time"
-              logo="/images/quantiphi-logo.png"
+              logo="images/quantiphi-logo.png"
               details={quantiphiDetails}
             />
             
@@ -337,7 +337,7 @@ function App() {
               duration="Mar 2021 - Apr 2021"
               location="Muscat, Oman"
               type="Internship"
-              logo="/images/bahwan-logo.jpg"
+              logo="images/bahwan-logo.jpg"
               details={bahwanCyberTekDetails}
             />
           </div>
